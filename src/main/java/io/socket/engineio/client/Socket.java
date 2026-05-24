@@ -269,7 +269,7 @@ public class Socket extends Emitter {
         if (logger.isLoggable(Level.FINE)) {
             logger.fine(String.format("creating transport '%s'", name));
         }
-        Map<String, String> query = new HashMap<String, String>(this.query);
+        Map<String, String> query = new LinkedHashMap<String, String>(this.query);
 
         query.put("EIO", String.valueOf(Parser.PROTOCOL));
         query.put("transport", name);
