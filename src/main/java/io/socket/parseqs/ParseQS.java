@@ -3,7 +3,7 @@ package io.socket.parseqs;
 
 import io.socket.global.Global;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ParseQS {
@@ -21,7 +21,7 @@ public class ParseQS {
     }
 
     public static Map<String, String> decode(String qs) {
-        Map<String, String> qry = new HashMap<String, String>();
+        Map<String, String> qry = new LinkedHashMap<String, String>();
         String[] pairs = qs.split("&");
         for (String _pair : pairs) {
             String[] pair = _pair.split("=");
